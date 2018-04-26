@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentia - Landing page prototype</title>
+    <meta name="description" content="">
+    <% for (var chunk of webpack.chunks) {
+            for (var file of chunk.files) {
+                if (file.match(/\.(js|css)$/)) { %>
+        <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
+        <% }
+        }
+    } %>
+</head>
+
+<body>
+ 
+    <div id="logo">
+        <a href="/" title="Forside">
+            <img inline src="src/images/logo.svg" alt="Pentia">
+        </a>
+    </div>
+
+    <nav class="offcanvas" id="navigation">
+        <ul class="offcanvas__list">
+            <li  class="offcanvas__item">
+                <a href="/lorem-ipsum/" class="offcanvas__link">
+                    Lorem ipsum
+                </a>
+            </li>
+            <li  class="offcanvas__item">
+                <a href="/dolor-sit-amet/" class="offcanvas__link">
+                    Dolor sit amet
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+ 
+    <div class="offcanvas__toggle" type="button" aria-label="Menu" aria-controls="navigation" tabindex="0">
+        <div class="hamburger hamburger--slider" id="hamburger">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </div> 
+        <!-- TODO: FIX this -->
+        <div class="hamburger--slider is-active"></div>
+    </div>
+    
+    
+    <main class="content offcanvas__main">
+        <section class="hero is-dark">
+            <div class="hero-body">
+                <p id="lorem-ipsum" class="is-hidden-mobile">Lorem Ipsum</p>
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-half">
+                        <div class="svg is-inline-block is-half">
+                            <img inline src="src/images/zeppeliner.svg" alt="" aria-hidden="true">
+                        </div>
+                        <h1 class="title is-size-1 is-size-4-mobile has-text-weight-bold">Digital Transformation</h1>
+                        <p class="subtitle">Rådgivning. Implementering. Resultater</p>
+                        <p>
+                            Hvordan bliver din virksomhed en digital vinder i fremtiden?
+                            <br> Hvilke tiltag skal der til strategisk og taktisk for at dreje forretningen i den rigtig retning? Hvilke elementer
+                            indeholder en succesfuld digital transformation? Vu har svarene. Pentia kan hjælpe dig på hele rejsen fra strategisk
+                            rådgivning til implementering.
+                        </p>
+                        <p>
+                            <a href="/start/" id="start" class="is-size-7">
+                                Start din rejse her
+                                <span class="dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero is-white is-medium" id="section-digital-transformation">
+            <div class="hero-body">
+                <div class="columns is-centered">
+                    <div class="column is-half has-text-centered">
+                        <h2 class="title has-text-weight-bold">Vi kan hjælpe dig med <br>digital transformation på to fronter</h2>
+                        <div class="columns is-centered  has-text-centered">
+                            <section class="column">
+                                <div class="svg is-inline-block is-half">
+                                    <img inline src="src/images/illustration1.svg" alt="" aria-hidden="true">
+                                </div>
+                                <h3 class="title has-text-weight-bold">Strategisk rådgivning om digital Transformation</h3>
+                                <p>
+                                    Udnytter din virksomhed sit digitale potentiale?
+                                    <br> Hvilke forretningsmuligheder er der, og hvad betyder det på et strategisk plan?
+                                </p>
+                            </section>
+                            <section class="column">
+                                <div class="svg is-inline-block is-half">
+                                    <img inline src="src/images/illustration2.svg" alt="" aria-hidden="true">
+                                </div>
+                                <h3 class="title has-text-weight-bold">Eksekvering af digital Transformation</h3>
+                                <p>
+                                    I ved, hvad I vil, men I har brug for hjælp til at rulle strategien ud i forhold til organisatinoen og det digitale fundament
+                                    bl.a. Sitecore.
+                                    <br> Det handler om mennekser og resultater.
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero is-danger is-medium">
+            <div class="hero-body">
+                <div class="columns is-centered">
+                    <div class="column is-half ">
+                        <div class="has-text-centered">
+                            <h2 class="title has-text-weight-bold">
+                                Få 10 gode råd om <br>
+                                digital transformation
+                            </h2>
+                            <p>
+                                Ja tak, jeg vil gerne høre mere om digital Transformation
+                            </p>
+                        </div>
+                        <form action="/" method="post" class="m-t-4">
+                            <div class="field">
+                                <label class="label" for="navn">Navn</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="navn" name="navn" required>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field">
+                                        <label class="label" for="mobil">Mobil</label>
+                                        <div class="control">
+                                            <input class="input" type="tel" id="mobil" name="mobil" required pattern="^[0-9 ]*$">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label" for="email">E-mail</label>
+                                        <div class="control">
+                                            <input class="input" type="email" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field">
+                                        <label class="label" for="postnr">Postnr</label>
+                                        <div class="control">
+                                            <input class="input" type="number" id="postnr" name="postnr" pattern="[0-9]{3,4}" required>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label" for="by">By</label>
+                                        <div class="control">
+                                            <input class="input" type="text" id="by" name="by" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="buttons is-centered m-t-2">
+                                <input class="button is-large is-danger is-inverted" type="submit" value="Ring mig op">
+                            </div>
+                        </form>
+
+                        <div class="has-text-centered m-t-2">
+                            <div class="svg is-inline-block w-70">
+                                <img inline src="src/images/prize.svg" alt="" aria-hidden="true">
+                            </div>
+                            <p>
+                                Pentia vinder pris for digital innovation 2017
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

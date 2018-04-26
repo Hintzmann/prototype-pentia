@@ -1,0 +1,47 @@
+body {
+    font-family: $body-font;
+    color: $body-color;
+    font-size: 100%;
+}
+#logo {
+    position: fixed;
+    top:20px;
+    left:20px;
+    width:30px; 
+    z-index: 3000;
+
+    path {
+        transition: fill .25s cubic-bezier(.895,.03,.685,.22);
+        fill:#fff;
+    }
+	&:hover path {
+		fill:darken(#fff, 30%);
+	}
+}
+#lorem-ipsum {
+    margin-left:46px;
+}
+#hamburger {
+    position: absolute;
+    top: 50%;
+    // height: 64px;
+    margin-top: -32px;
+}
+.svg {
+    svg {
+        fill: currentColor;
+    }
+    &.is-half {
+        width:50%;
+    }
+}
+.w-70 {
+    width:70px;
+}
+.m-t-2 {
+    margin-top:2rem;
+}
+.m-t-4 {
+    margin-top:4rem;
+}
+.hero.is-white {background-color:#fff !important}

@@ -1,0 +1,30 @@
+{
+  "name": "es6-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rimraf dist && webpack --watch",
+    "prod": "rimraf dist && cross-env NODE_ENV=production webpack"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "buble-loader": "^0.4.1",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-inline-svg-plugin": "^1.2.4",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.3",
+    "purgecss-webpack-plugin": "^0.22.0",
+    "raf": "^3.3.2",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.5",
+    "webpack": "^2.6.0",
+    "webpack-bundle-analyzer": "^2.8.2"
+  },
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "bulma-material-form": "^0.1.0",
+    "hamburgers": "^0.9.3"
+  }
+}
