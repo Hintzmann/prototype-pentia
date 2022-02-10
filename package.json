@@ -14,7 +14,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "html-webpack-inline-svg-plugin": "^1.2.4",
     "html-webpack-plugin": "^2.28.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "purgecss-webpack-plugin": "^0.22.0",
     "raf": "^3.3.2",
     "rimraf": "^2.6.1",
